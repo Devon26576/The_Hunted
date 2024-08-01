@@ -1,2 +1,2 @@
 # The_Hunted
-Devon Blackwell's final project: you are pray find all the food and discover the ability to fight back against your pursuer.
+Devon Blackwell's final project: In The_hunter(TM) you play as a a small creature forced to forage at dawn as a deadly night Predator begins emerge from its slumber you must collect all food items and get back to your home in the great center tree.
