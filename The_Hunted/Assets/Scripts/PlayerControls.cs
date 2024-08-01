@@ -14,11 +14,12 @@ public class PlayerControls : MonoBehaviour
     public float pitchSpeed = 7f;
     public float pitchRange = 45f;
     private bool isGrounded;
-
+    public int healthValue = 1;
     public float groundCheckDist = 1.0f;
     public float jumpForce = 5f;
     public float gravity = -9.81f;
     public float gravityScale = 3f;
+    public GameManager gameManager;
     
     private Vector3 velocity;
 
@@ -123,12 +124,11 @@ public class PlayerControls : MonoBehaviour
     {
         if(other.CompareTag("Enemy"))
         {
-            health = health - enemy.damage;
-
+            health -= enemy.damage;
+           
             if(health <= 0)
             {
-                GameManager.Instance.GameOver();
-
+                gameManager.GameOver();
                 Destroy(gameObject);
             }
         }

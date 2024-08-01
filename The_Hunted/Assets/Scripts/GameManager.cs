@@ -9,14 +9,19 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set;}
     
     public int score = 0;
-    
+
+    //* public int health = 0;
     public GameObject pickupParent;
+
+    public TextMeshProUGUI healthText;
 
     public int totalPickups = 0;
 
     public TextMeshProUGUI scoreText;
 
-    private PlayerControls player;
+    public PlayerControls player;
+
+    public EnemyFollow enemy;
 
     public GameObject victoryText;
 
@@ -38,11 +43,12 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         score = 0;
-       UpdateScoreText();
 
         victoryText.SetActive(false);
-
-       totalPickups = pickupParent.transform.childCount;
+        //* health = 3;
+      
+        
+        totalPickups = pickupParent.transform.childCount;
     }
 
     public void UpdateScore(int amount)
@@ -85,4 +91,6 @@ public class GameManager : MonoBehaviour
             GameOver();
         }
     }
+
+
 }
